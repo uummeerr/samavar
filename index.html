@@ -474,6 +474,8 @@ body.menu-on{overflow:hidden}
 .leaf{position:absolute;left:0;top:0;z-index:4;width:34px;height:34px;fill:#d08a55;color:#8a4a1f;opacity:0;pointer-events:none}
 .foot-bar{background:#0c1330;position:relative;z-index:3;font-size:.76rem;letter-spacing:.09em;color:#8e96b6}
 .foot-bar .fw{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding:12px 0 18px}
+.foot-bar .by{color:#f0c987;text-decoration:underline;text-underline-offset:3px;transition:color .3s}
+.foot-bar .by:hover{color:#fff}
 .totop{background:none;border:1px solid rgba(240,201,135,.55);border-radius:999px;color:#f0c987;padding:10px 16px;font:500 .7rem/1 var(--sans);letter-spacing:.15em;text-transform:uppercase;transition:background .3s,color .3s}
 .totop:hover{background:#f0c987;color:var(--indigo-deep)}
 @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px 24px}.foot-top{flex-direction:column;align-items:flex-start;gap:26px}}
@@ -1164,6 +1166,7 @@ html.lenis{scroll-behavior:auto}
     <div class="foot-bar">
       <div class="fw">
         <span>© <span id="yr"></span> Samavar · Handpacked in Kashmir</span>
+        <span>A product of <a class="by" id="fSite" href="samavar.html">Samavar</a></span>
         <button class="totop" id="toTop" type="button">Back to top ↑</button>
       </div>
     </div>
@@ -1179,7 +1182,7 @@ html.lenis{scroll-behavior:auto}
 /* ====== SET THESE BEFORE GOING LIVE ======
    whatsapp: your number with country code, digits only, e.g. "9198XXXXXXXX"
    email:    where enquiries should go if WhatsApp is not set               */
-const CONFIG = { whatsapp: "", email: "" };
+const CONFIG = { whatsapp: "", email: "", site: "" };   /* site: optional URL to override the footer's "A product of Samavar" link (defaults to samavar.html) */
 
 /* Hotels offered as quick picks in the label preview. Edit freely. */
 const STAYS = {
@@ -1530,6 +1533,7 @@ if (G && finePointer && !calm) document.querySelectorAll(".mag").forEach(el => {
 /* --- footer contact links come from CONFIG --- */
 if (CONFIG.whatsapp) { const a = document.getElementById("fWa"); a.href = "https://wa.me/" + CONFIG.whatsapp; a.hidden = false; }
 if (CONFIG.email) { const a = document.getElementById("fMail"); a.href = "mailto:" + CONFIG.email; a.hidden = false; }
+if (CONFIG.site) { const a = document.getElementById("fSite"); a.href = CONFIG.site; a.target = "_blank"; a.rel = "noopener"; }
 
 /* --- footer: slides out from under the page when it fits one screen --- */
 const foot = document.getElementById("foot");
