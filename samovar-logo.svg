@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">Kashmiri Samovar Logo</title>
+<desc id="desc">Elegant single-color vector emblem of a traditional engraved Kashmiri samovar</desc>
+<g fill="none" stroke="#8B5A2B" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+<!-- curved spout -->
+<path d="M348 182 C389 159 402 130 417 125 C432 120 444 133 465 135 C455 146 450 151 437 153 C425 156 420 170 409 184 L365 224"/>
+<path d="M415 147 Q435 143 453 142" stroke-width="5"/>
+<!-- ornate handle -->
+<path d="M162 190 C121 167 90 176 74 208 C51 252 69 309 106 320 C129 328 148 308 136 291 C129 280 117 285 118 296"/>
+<path d="M164 191 C151 195 143 200 137 213" stroke-width="6"/>
+<!-- bowl silhouette -->
+<path d="M172 183 C157 205 153 231 162 261 C170 291 188 311 205 320 L307 320 C324 311 343 291 351 261 C360 231 355 205 340 183"/>
+<!-- top of bowl / shoulder -->
+<path d="M172 183 Q175 161 199 152 L313 152 Q337 161 340 183 Z"/>
+<!-- rim and metal band -->
+<path d="M164 183 H348 M170 193 H342" stroke-width="7"/>
+<!-- lid -->
+<path d="M196 152 Q207 123 229 114 L229 93 Q229 82 241 82 H271 Q283 82 283 93 L283 114 Q305 123 316 152"/>
+<path d="M240 82 L240 67 Q240 54 256 48 Q272 54 272 67 L272 82"/>
+<path d="M228 113 H284" stroke-width="6"/>
+<!-- foot and stem -->
+<path d="M217 320 L217 345 L295 345 L295 320 M226 345 L216 364 L296 364 L286 345"/>
+<path d="M216 364 Q207 383 188 395 L324 395 Q305 383 296 364"/>
+<path d="M184 395 H328 L338 413 H174 Z"/>
+<path d="M188 402 H324" stroke-width="4"/>
+<!-- leaf/flower medallion -->
+<path d="M256 218 C231 235 218 259 223 282 C229 302 242 307 256 307 C270 307 283 302 289 282 C294 259 281 235 256 218 Z" stroke-width="6"/>
+<path d="M256 293 V236 M256 265 L238 249 M256 277 L275 260 M256 288 L238 277" stroke-width="5"/>
+<!-- minimal engraved ornamental accents -->
+<path d="M190 215 Q181 246 194 275 M322 215 Q331 246 318 275" stroke-width="4"/>
+<path d="M202 205 L210 213 M310 205 L302 213 M205 289 L214 297 M307 289 L298 297" stroke-width="4"/>
+<path d="M232 335 H280" stroke-width="4"/>
+</g>
+</svg>

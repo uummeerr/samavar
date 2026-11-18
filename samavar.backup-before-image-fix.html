@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Samavar — Kashmiri Hand-Engraved Kettle in Silver &amp; Copper</title>
+<meta name="description" content="The samavar is the hand-engraved Kashmiri kettle that kahwa is brewed in. See its parts, its silver and copper finishes, and the handwork that covers it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500&family=Noto+Nastaliq+Urdu:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --silver-1:#eceded; --silver-2:#d6d8db; --silver-3:#b9bcc1; --pewter:#6b7078;
+  --ink:#1e2126; --ink-soft:#3d424a;
+  --copper-1:#e0a479; --copper-2:#b8703f; --copper-3:#8a4a22; --copper-4:#5c2c11; --copper-5:#32170a;
+  --on-copper:#f6e9dd;
+  --serif:"Fraunces",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+  --metal-copper:linear-gradient(100deg,#6e3414,#c07a48 28%,#8a4a22 52%,#d49466 74%,#6e3414);
+  --metal-silver:linear-gradient(100deg,#f4f4f5,#b9bcc1 30%,#f1f1f2 55%,#a9adb3 78%,#eceded);
+
+  /* The handwork: hand-cut chinar leaves held in a beaded vine lattice. A light line sits
+     under a dark one, so it reads as engraving on both the dark and the light metal. */
+  --handwork:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='240' viewBox='0 0 160 240'><defs><filter id='h' filterUnits='userSpaceOnUse' x='0' y='0' width='160' height='240'><feTurbulence type='fractalNoise' baseFrequency='.05' numOctaves='2' seed='4' stitchTiles='stitch'/><feDisplacementMap in='SourceGraphic' scale='3.5' xChannelSelector='R' yChannelSelector='G'/></filter><g id='c'><path stroke-width='.8' d='M0 12L-9 10L-22 15L-18 7L-21 3L-14 1L-27-12L-17-10L-16-15L-9-9L-7-19L-4-17L0-30L4-17L7-19L9-9L16-15L17-10L27-12L14 1L21 3L18 7L22 15L9 10Z'/><path stroke-width='.45' d='M0 12V-25M0 12L-22-10M0 12L22-10M0 12L-18 13M0 12L18 13M0-4L-5-12M0-4L5-12M-10 1L-16-1M10 1L16-1'/><path stroke-width='.8' d='M0 12c1 6 0 12-3 18'/></g><g id='t'><use href='%23c' transform='translate(0 -76) scale(.45)'/><use href='%23c' transform='translate(0 76) rotate(180) scale(.45)'/></g><g id='A'><use href='%23c' transform='rotate(-9) scale(1.75)'/><use href='%23t'/></g><g id='B'><use href='%23c' transform='rotate(171) scale(1.75)'/><use href='%23t'/></g><g id='a' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.3'><path id='o' d='M0 0C0 60 80 60 80 120S160 180 160 240M160 0C160 60 80 60 80 120S0 180 0 240'/><use href='%23o' stroke-width='3' stroke-dasharray='.1 7' transform='translate(5 0)'/><use href='%23o' stroke-width='3' stroke-dasharray='.1 7' transform='translate(-5 0)'/><use href='%23A' x='80'/><use href='%23A' x='80' y='240'/><use href='%23B' y='120'/><use href='%23B' x='160' y='120'/><circle cx='80' cy='120' r='3.5'/><circle r='3.5'/><circle cx='160' r='3.5'/><circle cy='240' r='3.5'/><circle cx='160' cy='240' r='3.5'/></g></defs><g filter='url(%23h)'><use href='%23a' y='1.3' stroke='rgb(255,228,205)' stroke-opacity='.45'/><use href='%23a' stroke='rgb(30,26,24)' stroke-opacity='.36'/></g></svg>");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.65;color:var(--ink);background:#160a04;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+/* full-site background: one sheet of chinar handwork laid over the whole page */
+/* the leaves are a mask, so the gradient underneath is what colours them: bright copper over
+   the dark metal at top and foot, deep copper over the silver in the middle */
+body::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.6;
+  background:linear-gradient(180deg,#f3c7a3 0,#e0a479 14%,#d49466 30%,#8a4a22 44%,#5c2c11 56%,#8a4a22 76%,#d49466 86%,#e0a479 94%,#f3c7a3);
+  -webkit-mask:var(--handwork) center top/40px 60px;mask:var(--handwork) center top/40px 60px}
+/* the engraved line (light under dark) on top, so the leaves never fade out where the
+   leaf colour and the metal pass through the same tone */
+body::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:var(--handwork) center top/40px 60px}
+section>.wrap,footer>.wrap{position:relative;z-index:1}
+/* the metal under it: dark copper at the top, silver in the middle, dark copper again at the foot.
+   The copper-to-silver blend is long and evenly stepped so there is no band between them. */
+.hero{background:linear-gradient(180deg,#160a04,#4a220d)}
+#handwork{padding-bottom:clamp(300px,30vw,400px);background:linear-gradient(180deg,#4a220d 0,#7a3f1c calc(100% - 440px),#8f5632 calc(100% - 370px),#a57350 calc(100% - 300px),#bb9478 calc(100% - 230px),#ccb5a4 calc(100% - 160px),#d8cfc9 calc(100% - 90px),#e0dfdf calc(100% - 20px),#e2e2e3)}
+#parts{background:linear-gradient(180deg,#e2e2e3,#e4e5e7 160px,#dcdee0)}
+#metals{background:linear-gradient(180deg,#dcdee0 0,#e4e5e7 calc(100% - 520px),#e0dfdf calc(100% - 430px),#d8cfc9 calc(100% - 350px),#ccb5a4 calc(100% - 280px),#bb9478 calc(100% - 210px),#a57350 calc(100% - 140px),#8f5632 calc(100% - 70px),#7a3f1c)}
+#day{background:linear-gradient(180deg,#7a3f1c,#693416 50%,#7a3f1c)}
+#brew{background:linear-gradient(180deg,#7a3f1c,#2a1308)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
+h2{font-size:clamp(2rem,4.6vw,3.2rem)}
+h3{font-size:1.5rem}
+p{text-wrap:pretty}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section{padding:clamp(64px,9vw,112px) 0;position:relative}
+.kicker{font-size:.8rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--copper-3);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:34px;height:1px;background:currentColor}
+.silver-text{background:var(--metal-silver);-webkit-background-clip:text;background-clip:text;color:transparent}
+.copper-sec .copper-text{background-image:linear-gradient(100deg,#b8703f,#f0bd95 30%,#c07a48 55%,#f3c7a3 78%,#b8703f)}
+.copper-text{background:var(--metal-copper);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* plates: polished panels the text sits on, so the handwork never fights the words */
+.plate{background:rgba(245,246,247,.9);border:1px solid rgba(60,64,72,.28);outline:1px solid rgba(138,74,34,.45);outline-offset:-7px;padding:clamp(24px,4vw,44px);box-shadow:0 1px 0 #fff inset,0 18px 40px -22px rgba(30,33,38,.55)}
+
+/* header */
+header{position:fixed;top:14px;left:0;right:0;z-index:100;pointer-events:none;color:var(--on-copper)}
+.nav-pill{pointer-events:auto;position:relative;width:min(1120px,100% - 28px);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:7px 7px 7px 26px;border-radius:999px;overflow:hidden;background:rgba(30,13,5,.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6);border:1px solid rgba(224,164,121,.34);box-shadow:0 1px 0 rgba(255,222,190,.2) inset,0 26px 50px -26px rgba(0,0,0,.9);transition:transform .7s cubic-bezier(.2,.7,.1,1),background-color .5s}
+header.scrolled .nav-pill{background:rgba(22,10,4,.82)}
+header.hide .nav-pill{transform:translateY(-160%)}
+.brand{font-family:var(--serif);font-style:italic;font-size:1.6rem;text-decoration:none;background:var(--metal-silver);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-links{position:relative;display:flex;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:400}
+.nav-links a{position:relative;z-index:1;padding:12px 18px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:color .35s}
+.nav-links a:hover,.nav-links a:focus-visible,.nav-links a.active{color:var(--copper-1)}
+.nav-hl{position:absolute;left:0;top:0;height:100%;width:0;border-radius:999px;background:linear-gradient(180deg,rgba(224,164,121,.24),rgba(224,164,121,.08));box-shadow:0 0 0 1px rgba(224,164,121,.42) inset,0 1px 0 rgba(255,230,205,.3) inset;opacity:0;pointer-events:none}
+.nav-end{display:flex;align-items:center;gap:8px}
+.nav-cta{display:inline-flex;align-items:center;gap:12px;padding:6px 6px 6px 20px;border-radius:999px;background:var(--metal-copper);background-size:200% 100%;color:#fff8f1;font-size:.76rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:transform .35s cubic-bezier(.2,.7,.1,1)}
+.nav-cta svg{width:34px;height:34px;flex:none;border-radius:50%;background:#160a04;padding:10px;fill:none;stroke:var(--copper-1);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .5s cubic-bezier(.2,.7,.1,1)}
+.nav-cta:hover svg{transform:rotate(45deg)}
+.roll{display:inline-block;overflow:hidden;height:1.6em;line-height:1.6em;vertical-align:middle}
+.roll>span{display:block;text-shadow:0 1.6em 0 currentColor;transition:transform .55s cubic-bezier(.2,.7,.1,1)}
+a:hover>.roll>span,a:focus-visible>.roll>span{transform:translateY(-1.6em)}
+.burger{width:46px;height:46px;flex:none;border-radius:50%;position:relative;cursor:var(--leaf-on);background:rgba(224,164,121,.1);border:1px solid rgba(224,164,121,.45);color:var(--on-copper);transition:background-color .35s,transform .35s cubic-bezier(.2,.7,.1,1)}
+.burger:hover{background:rgba(224,164,121,.26)}
+.burger i{position:absolute;left:13px;right:13px;top:50%;height:1.5px;margin-top:-.75px;background:currentColor;transition:transform .55s cubic-bezier(.7,0,.2,1)}
+.burger i:first-child{transform:translateY(-4px)}
+.burger i:last-child{transform:translateY(4px)}
+.menu-open .burger i:first-child{transform:rotate(45deg)}
+.menu-open .burger i:last-child{transform:rotate(-45deg)}
+.prog{position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,#b8703f,#f3c7a3,#b8703f);transform:scaleX(0);transform-origin:0 50%}
+
+/* full-screen menu */
+.menu{position:fixed;inset:0;z-index:90;visibility:hidden;color:var(--on-copper);overflow-y:auto;background:var(--handwork) center top/40px 60px,radial-gradient(120% 90% at 80% 10%,#5c2c11,#2a1308 45%,#120702)}
+.menu-in{min-height:100%;width:min(1120px,100% - 40px);margin-inline:auto;padding:118px 0 30px;display:grid;grid-template-columns:1.25fr .75fr;grid-template-rows:1fr auto;gap:24px clamp(28px,6vw,90px);align-items:center}
+.menu-links{display:flex;flex-direction:column}
+.menu-links a{display:flex;align-items:baseline;gap:22px;text-decoration:none;padding:.1em 0;border-bottom:1px solid rgba(224,164,121,.2);font:400 clamp(2rem,min(6.6vw,8.4vh),5rem)/1.12 var(--serif);letter-spacing:-.02em;transition:opacity .4s,color .4s,padding-left .6s cubic-bezier(.2,.7,.1,1)}
+.menu-links small{font:500 .78rem var(--sans);letter-spacing:.2em;color:var(--copper-1);width:2.2em;flex:none}
+.menu-links .ml{display:block;overflow:hidden;padding:0 .1em .08em 0}
+.menu-links b{display:block;font-weight:400}
+.menu-links:hover a{opacity:.32}
+.menu-links a:hover,.menu-links a:focus-visible{opacity:1;color:var(--copper-1);padding-left:22px;font-style:italic}
+.menu-side{justify-self:end;width:min(300px,100%);text-align:center;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--copper-1)}
+.menu-arch{border-radius:999px 999px 6px 6px;padding:8px;background:var(--metal-copper);margin-bottom:18px;box-shadow:0 40px 70px -30px #000}
+.menu-arch div{border-radius:999px 999px 2px 2px;overflow:hidden;background:#fff}
+.menu-arch img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.menu-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px;padding-top:18px;border-top:1px solid rgba(224,164,121,.28);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase}
+.menu-foot span:nth-child(2){color:var(--copper-1)}
+
+/* hero */
+.hero{padding-top:calc(86px + clamp(40px,6vw,80px))}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,72px);align-items:center}
+h1{font-size:clamp(3.2rem,9vw,7rem);line-height:.95;margin-bottom:22px}
+h1 em{font-weight:400}
+.lead{font-size:1.18rem;max-width:34em;background:rgba(22,10,4,.72);border-left:3px solid var(--copper-1);padding:16px 20px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{display:inline-block;text-decoration:none;font-size:.84rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:15px 26px;border:1px solid var(--copper-4);transition:filter .2s,transform .2s}
+.btn.copper{background:var(--metal-copper);color:#fff8f1;text-shadow:0 1px 1px rgba(50,23,10,.6)}
+.btn.silver{background:var(--metal-silver);color:var(--ink);border-color:var(--pewter)}
+.btn:hover,.btn:focus-visible{filter:brightness(1.1);transform:translateY(-2px)}
+.arch{border-radius:999px 999px 6px 6px;overflow:hidden;border:1px solid var(--copper-4);padding:9px;background:var(--metal-copper);box-shadow:0 30px 60px -30px rgba(30,33,38,.8)}
+.arch img{width:100%;border-radius:999px 999px 2px 2px;aspect-ratio:386/518;object-fit:cover}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:38px;background:rgba(224,164,121,.45);border:1px solid rgba(224,164,121,.45)}
+.facts div{background:rgba(34,15,6,.92);padding:16px 18px}
+.facts b{display:block;font-family:var(--serif);font-weight:500;font-size:1.3rem;color:var(--copper-1)}
+.facts span{font-size:.9rem}
+
+/* dark sections: light text on the dark metal */
+.copper-sec{color:var(--on-copper)}
+.copper-sec .kicker{color:var(--copper-1)}
+.copper-sec h2{background:var(--metal-silver);-webkit-background-clip:text;background-clip:text;color:transparent}
+.intro{max-width:40em;margin-bottom:clamp(32px,5vw,56px)}
+.intro p{margin-top:16px;font-size:1.1rem}
+
+/* handwork steps */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.steps li{counter-increment:s;border:1px solid rgba(224,164,121,.45);padding:26px 22px;background:rgba(50,23,10,.55)}
+.steps li::before{content:"0" counter(s);font-family:var(--serif);font-style:italic;font-size:2.4rem;line-height:1;display:block;margin-bottom:14px;background:var(--metal-silver);-webkit-background-clip:text;background-clip:text;color:transparent}
+.steps h3{color:var(--copper-1);margin-bottom:8px}
+.steps p{font-size:.98rem}
+.motifs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px}
+.motif{display:flex;gap:16px;align-items:center;border-top:1px solid rgba(224,164,121,.45);padding-top:18px}
+.motif svg{width:54px;height:54px;flex:none;fill:none;stroke:var(--silver-1);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.motif b{font-family:var(--serif);font-weight:500;font-size:1.1rem;display:block;color:var(--copper-1)}
+.motif span{font-size:.92rem}
+
+/* anatomy */
+.anatomy{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,64px);align-items:center}
+.figure{position:relative;background:#fff;border:1px solid rgba(60,64,72,.28);outline:1px solid rgba(138,74,34,.45);outline-offset:-7px;padding:26px;box-shadow:0 18px 40px -22px rgba(30,33,38,.55)}
+.figure .pin{position:relative}
+.dot{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:var(--metal-copper);color:#fff;font:500 .85rem/30px var(--sans);text-align:center;border:1px solid var(--copper-5);box-shadow:0 0 0 4px rgba(255,255,255,.75)}
+.parts{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(60,64,72,.28);border:1px solid rgba(60,64,72,.28);margin-top:26px}
+.parts li{background:rgba(245,246,247,.92);padding:18px 18px 18px 60px;position:relative}
+.parts li i{position:absolute;left:16px;top:18px;width:30px;height:30px;border-radius:50%;background:var(--metal-copper);color:#fff;font:normal 500 .85rem/30px var(--sans);text-align:center}
+.parts b{font-family:var(--serif);font-weight:500;font-size:1.15rem;display:block}
+.parts span{font-size:.94rem;color:var(--ink-soft)}
+
+/* two metals */
+.metals{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.metal{display:grid;grid-template-rows:auto 1fr;background:rgba(245,246,247,.92);border:1px solid rgba(60,64,72,.28);box-shadow:0 18px 40px -22px rgba(30,33,38,.55)}
+.metal .shot{background:#fff;overflow:hidden;border-bottom:6px solid}
+.metal .shot img{height:420px;width:100%;object-fit:contain;padding:22px}
+.metal.cu .shot img{padding:0}
+.metal.ag .shot{border-image:var(--metal-silver) 1}
+.metal.cu .shot{border-image:var(--metal-copper) 1}
+.metal .txt{padding:28px}
+.metal h3{font-size:1.8rem;margin-bottom:10px}
+.metal ul{margin-top:14px;padding-left:1.1em;font-size:.98rem;color:var(--ink-soft)}
+.metal li+li{margin-top:4px}
+
+/* brew + footer */
+.brew{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,64px);align-items:center}
+.brew ol{margin:20px 0 0 1.2em}
+.brew li{padding-left:6px}
+.brew li+li{margin-top:10px}
+.brew li::marker{font-family:var(--serif);font-style:italic;color:var(--copper-1);font-size:1.2rem}
+.spice{border:1px solid rgba(224,164,121,.45);background:rgba(50,23,10,.55);padding:28px}
+.spice h3{color:var(--copper-1);margin-bottom:14px}
+.spice dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:.98rem}
+.spice dt{font-weight:500;color:var(--silver-1)}
+footer{position:relative;color:var(--on-copper);background:linear-gradient(180deg,#2a1308,#160a04 34%,#0b0401);padding:clamp(80px,11vw,150px) 0 0;overflow:hidden}
+.foot-cta{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;padding-bottom:clamp(50px,7vw,90px)}
+.foot-cta .kicker{color:var(--copper-1)}
+.foot-h{font-size:clamp(2.6rem,7.6vw,6.4rem);line-height:1;background:var(--metal-silver);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 9s linear infinite}
+.foot-h em{font-weight:400;background:linear-gradient(100deg,#b8703f,#f0bd95 30%,#c07a48 55%,#f3c7a3 78%,#b8703f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.orb{position:relative;width:clamp(150px,17vw,200px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;text-decoration:none;background:var(--metal-copper);background-size:200% 100%;color:#fff8f1;font-size:.84rem;font-weight:500;letter-spacing:.18em;line-height:1.7;text-transform:uppercase;text-shadow:0 1px 1px rgba(50,23,10,.6);box-shadow:0 0 0 1px rgba(243,199,163,.5),0 0 0 12px rgba(224,164,121,.09),0 40px 70px -30px #000;transition:transform .5s cubic-bezier(.2,.7,.1,1),box-shadow .5s}
+.orb:hover{box-shadow:0 0 0 1px rgba(243,199,163,.8),0 0 0 22px rgba(224,164,121,.13),0 40px 70px -30px #000}
+.orb svg{display:block;width:26px;height:26px;margin:8px auto 0;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .6s cubic-bezier(.2,.7,.1,1)}
+.orb:hover svg{transform:rotate(45deg) scale(1.15)}
+.foot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding:38px 0 clamp(40px,6vw,70px);border-top:1px solid rgba(224,164,121,.28)}
+.foot-grid h3{font:500 .74rem var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--copper-1);margin-bottom:16px}
+.foot-grid a,.foot-grid span{display:block;width:fit-content;font-size:1.02rem;line-height:1.9;text-decoration:none}
+.foot-grid span{color:rgba(246,233,221,.72)}
+.foot-grid a{background:linear-gradient(var(--copper-1),var(--copper-1)) 0 92%/0 1px no-repeat;transition:background-size .5s cubic-bezier(.2,.7,.1,1),color .3s,padding-left .5s cubic-bezier(.2,.7,.1,1)}
+.foot-grid a:hover,.foot-grid a:focus-visible{background-size:100% 1px;color:var(--copper-1);padding-left:8px}
+.foot-grid .clock{color:var(--silver-1);font-variant-numeric:tabular-nums}
+.foot-word{position:relative;z-index:1;text-align:center;white-space:nowrap;overflow:hidden;font:italic 400 clamp(5rem,25vw,27rem)/.86 var(--serif);letter-spacing:-.04em;padding:.06em .06em .1em;user-select:none}
+.foot-word span{display:inline-block;background:linear-gradient(180deg,#f6d6b8,#c07a48 48%,#5c2c11 96%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .04em;margin:0 -.04em}
+.foot-bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 30px;padding:20px 0 26px;border-top:1px solid rgba(224,164,121,.28);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,233,221,.72)}
+.totop{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--on-copper)}
+.totop svg{width:38px;height:38px;padding:11px;border-radius:50%;border:1px solid rgba(224,164,121,.5);fill:none;stroke:var(--copper-1);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .5s cubic-bezier(.2,.7,.1,1),background-color .4s}
+.totop:hover svg{transform:translateY(-6px);background:rgba(224,164,121,.2)}
+/* Lenis */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+
+/* ───────── motion layer ───────── */
+:root{--ease:cubic-bezier(.2,.7,.1,1)}
+
+/* opening curtain */
+.pre{display:none}
+.js .pre{display:flex;position:fixed;inset:0;z-index:200;background:#160a04;flex-direction:column;align-items:center;justify-content:center;gap:22px;clip-path:inset(0);transition:clip-path 1s cubic-bezier(.7,0,.2,1),visibility 0s 1s}
+.pre b{font:italic 400 clamp(2.6rem,8vw,5rem)/1 var(--serif);background:var(--metal-silver);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 2.2s linear infinite,rise .9s var(--ease) both}
+.pre i{width:min(220px,50vw);height:1px;background:rgba(224,164,121,.25);position:relative;overflow:hidden}
+.pre i::after{content:"";position:absolute;inset:0;background:var(--copper-1);transform-origin:0 50%;animation:fill 1.1s cubic-bezier(.6,0,.2,1) both}
+.loaded .pre{clip-path:inset(0 0 100% 0);visibility:hidden;pointer-events:none}
+@keyframes fill{from{transform:scaleX(0)}}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}}
+@keyframes sheen{to{background-position:200% 0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes ping{to{transform:scale(2.5);opacity:0}}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes steam{0%{opacity:0;transform:translate(-50%,-100%) scale(.5,.6)}25%{opacity:.6}100%{opacity:0;transform:translate(-50%,-100%) translate(22px,-130px) scale(1.6,1.5)}}
+
+/* living metal: a slow sheen travels across every metallic word */
+
+
+/* reveals */
+.rv,.tilt,.parts li,.facts div{transition:opacity .8s var(--ease) var(--d,0s),translate .8s var(--ease) var(--d,0s),filter .8s var(--ease) var(--d,0s),transform .25s ease-out,box-shadow .5s,background-color .5s,border-color .5s,background-size .6s var(--ease)}
+.js .rv{opacity:0;translate:0 26px}
+.js .rv.in{opacity:1;translate:none;filter:none}
+.js h2{clip-path:inset(-10% -5% 110% -5%);translate:0 34px;transition:clip-path 1.1s var(--ease) .1s,translate 1.1s var(--ease) .1s}
+.js h2.in{clip-path:inset(-10% -5% -20% -5%);translate:none}
+.js h1 em,.js h1>span{clip-path:inset(-20% -10% 120% -10%);translate:0 45%;transition:clip-path 1.3s var(--ease),translate 1.3s var(--ease)}
+.js h1>span{transition-delay:.18s}
+.js.loaded h1 em,.js.loaded h1>span{clip-path:inset(-20% -10% -25% -10%);translate:none}
+.js .kicker::before{transform:scaleX(0);transform-origin:0 50%;transition:transform 1s var(--ease) .35s}
+.js .in .kicker::before,.js .kicker.in::before{transform:none}
+
+/* hero stage: tilting arch, steam off the spout, turning seal, embers */
+.embers{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.stage{position:relative;transform-style:preserve-3d}
+.arch-in{position:relative;overflow:hidden;border-radius:999px 999px 2px 2px}
+.arch img{will-change:transform}
+h1 em,h1>span{display:block;width:fit-content}
+.steam{position:absolute;left:35%;top:19%;width:46px;height:96px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.8),transparent);filter:blur(9px);opacity:0;animation:steam 5s ease-out infinite;pointer-events:none}
+.steam.s2{left:38%;animation-delay:1.7s}
+.steam.s3{left:33%;animation-delay:3.3s}
+.seal{position:absolute;left:-54px;bottom:-36px;width:150px;height:150px;transform:translateZ(50px);filter:drop-shadow(0 16px 22px rgba(0,0,0,.6))}
+.seal text{font:500 12.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;fill:var(--copper-1)}
+.seal-spin{transform-origin:100px 100px;animation:spin 26s linear infinite}
+
+/* buttons: magnetic, with a blade of light */
+.btn{position:relative;overflow:hidden;transition:filter .3s,transform .35s var(--ease),box-shadow .35s}
+.btn::after{content:"";position:absolute;top:0;bottom:0;left:-70%;width:45%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-20deg);transition:left .8s var(--ease)}
+.btn:hover::after,.btn:focus-visible::after{left:125%}
+.btn:hover{box-shadow:0 18px 30px -16px rgba(0,0,0,.8)}
+
+/* cards: 3D tilt with a glare that tracks the pointer */
+.steps li,.metal,.spice{position:relative}
+.tilt{will-change:transform}
+.tilt:not(.stage)::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(440px circle at var(--mx,50%) var(--my,50%),rgba(255,220,180,.3),transparent 60%);opacity:0;transition:opacity .4s}
+.tilt:hover::after{opacity:1}
+.steps li{overflow:hidden;background-image:linear-gradient(90deg,#b8703f,#f3c7a3,#b8703f);background-repeat:no-repeat;background-position:0 100%;background-size:0 3px}
+.steps li.in:hover{translate:0 -10px;border-color:var(--copper-1);background-color:rgba(74,34,13,.85);background-size:100% 3px;box-shadow:0 34px 50px -30px #000}
+.steps li::before{transition:letter-spacing .6s var(--ease)}
+.steps li:hover::before{letter-spacing:.08em}
+.facts b{transition:letter-spacing .5s var(--ease)}
+.facts div:hover{background-color:rgba(92,44,17,.96)}
+.facts div:hover b{letter-spacing:.06em}
+.spice:hover,.metal:hover,.figure:hover{box-shadow:0 40px 60px -34px rgba(0,0,0,.75)}
+.spice dt{transition:color .3s,translate .4s var(--ease)}
+.spice dl:hover dt{color:var(--copper-1)}
+
+/* motifs draw themselves, then redraw on hover */
+.js .motif svg *{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s var(--ease) .2s}
+.js .motif.in svg *{stroke-dashoffset:0}
+.motif svg{transition:transform .7s var(--ease),stroke .4s}
+.motif:hover svg{transform:rotate(-8deg) scale(1.18);stroke:var(--copper-1)}
+.js .motif.in:hover svg *{animation:draw 1.1s var(--ease) both}
+
+/* anatomy: pulsing pins wired to the parts list */
+.dot{cursor:var(--leaf-on);transition:scale .35s var(--ease),box-shadow .35s}
+.dot::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--copper-2);animation:ping 2.6s ease-out infinite}
+.dot:nth-of-type(2)::after{animation-delay:.5s}.dot:nth-of-type(3)::after{animation-delay:1s}.dot:nth-of-type(4)::after{animation-delay:1.5s}.dot:nth-of-type(5)::after{animation-delay:2s}
+.dot:hover,.dot.hot{scale:1.45;box-shadow:0 0 0 6px rgba(224,164,121,.6),0 0 26px rgba(184,112,63,.9)}
+.parts li{background-image:linear-gradient(90deg,rgba(224,164,121,.42),rgba(224,164,121,0));background-repeat:no-repeat;background-size:0 100%}
+.parts li:hover,.parts li.hot{background-size:100% 100%}
+.parts li i{transition:rotate .7s var(--ease),scale .4s var(--ease)}
+.parts li:hover i,.parts li.hot i{rotate:360deg;scale:1.2}
+
+/* metals: slow zoom and a sweep of light across the photograph */
+.metal .shot{position:relative}
+.metal .shot img{transition:transform 1.4s var(--ease)}
+.js .metal:not(.in) .shot img{transform:scale(1.25)}
+.metal:hover .shot img{transform:scale(1.08)}
+.metal .shot::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg);transition:left 1.1s var(--ease);pointer-events:none}
+.metal:hover .shot::after{left:130%}
+
+@media (max-width:900px){
+  .hero .wrap,.anatomy,.brew,.metals{grid-template-columns:1fr}
+  .steps,.motifs{grid-template-columns:1fr 1fr}
+  .stage{max-width:380px;margin-inline:auto;width:100%}
+  .seal{left:-14px;bottom:-30px;width:116px;height:116px}
+  .figure{max-width:420px;margin-inline:auto}
+  .nav-links{display:none}
+  .menu-in{grid-template-columns:1fr}
+  .menu-side{display:none}
+}
+@media (max-width:560px){
+  .nav-cta{display:none}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-cta{grid-template-columns:1fr}
+  .steps,.motifs,.parts,.facts{grid-template-columns:1fr}
+  .metal .shot img{height:330px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .pre,.embers,.steam{display:none!important}
+  .js .rv,.js h2,.js h1 em,.js h1>span{opacity:1;translate:none;filter:none;clip-path:none}
+  .js .motif svg *{stroke-dashoffset:0}
+  .js .kicker::before,.js .metal:not(.in) .shot img{transform:none}
+}
+/* ───────── Kashmiri layer ───────── */
+[hidden]{display:none!important}
+/* the name in Nastaliq, the hand Kashmiri is written in */
+.koshur{font:500 1.5rem/1 "Noto Nastaliq Urdu",serif;letter-spacing:0;text-transform:none;color:var(--silver-1);padding-bottom:.5em}
+.foot-bar .koshur{font-size:1.2rem;color:var(--copper-1)}
+
+/* a day around the samavar: mihrab-arched cards that travel sideways */
+.day-wrap{position:relative;z-index:1;padding-inline:max(20px,calc((100% - 1120px)/2))}
+.day-row{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 0 20px;scrollbar-width:none}
+.day-row::-webkit-scrollbar{display:none}
+.day-row.pinned{overflow:visible;scroll-snap-type:none;width:max-content}
+.moment{flex:none;width:min(430px,82vw);scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;min-height:440px;padding:64px 34px 30px;background:linear-gradient(180deg,rgba(34,15,6,.86),rgba(50,23,10,.66));border:1px solid rgba(224,164,121,.5);border-radius:215px 215px 6px 6px;outline:1px solid rgba(224,164,121,.22);outline-offset:-9px;box-shadow:0 30px 50px -34px #000;transition:translate .6s cubic-bezier(.2,.7,.1,1),border-color .5s,box-shadow .5s}
+.moment:hover{translate:0 -10px;border-color:var(--copper-1);box-shadow:0 44px 60px -34px #000}
+.moment svg{width:62px;height:62px;flex:none;fill:none;stroke:var(--silver-1);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .8s cubic-bezier(.2,.7,.1,1),stroke .4s}
+.moment:hover svg{transform:rotate(-10deg) scale(1.15);stroke:var(--copper-1)}
+.moment .when{font-size:.74rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--copper-1)}
+.moment h3{font-size:1.9rem;background:var(--metal-silver);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.moment p{font-size:1rem}
+.moment .terms{margin-top:auto;padding-top:14px;width:100%;border-top:1px solid rgba(224,164,121,.35);font-size:.86rem;color:rgba(246,233,221,.78)}
+.moment .terms i{font-family:var(--serif);font-size:1.02rem;color:var(--copper-1)}
+.day-bar{height:2px;margin-top:14px;background:rgba(224,164,121,.25)}
+.day-bar i{display:block;height:100%;background:linear-gradient(90deg,#b8703f,#f3c7a3);transform:scaleX(0);transform-origin:0 50%}
+.day-hint{margin-top:12px;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--copper-1)}
+
+/* two teas, one kettle */
+.seg{display:inline-flex;gap:4px;padding:4px;margin-bottom:22px;border-radius:999px;border:1px solid rgba(224,164,121,.5);background:rgba(22,10,4,.5)}
+.seg button{font:500 .76rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--on-copper);background:none;border:0;border-radius:999px;padding:12px 20px;transition:background-color .4s,color .4s}
+.seg button[aria-pressed=true]{background:var(--metal-copper);color:#fff8f1}
+.seg button[data-tea=n][aria-pressed=true]{background:linear-gradient(100deg,#a85a62,#f2c0bb 50%,#a85a62);color:#3a1416}
+.tea-note{margin-top:18px;padding-top:14px;border-top:1px solid rgba(224,164,121,.35);font-size:.94rem}
+.tea-note i{font-family:var(--serif);color:var(--copper-1)}
+
+/* ───────── craft pass: fewer effects, type set straight on the metal ───────── */
+/* the handwork becomes a quiet texture so words can sit on it without a box */
+body::after{opacity:.3}
+body::before{opacity:.5}
+
+/* section heads: a ruled, numbered two-column head instead of a boxed intro */
+main{counter-reset:sec}
+.intro{counter-increment:sec;display:grid;grid-template-columns:minmax(120px,220px) 1fr;column-gap:clamp(24px,5vw,72px);max-width:none;padding-top:22px;border-top:1px solid rgba(60,64,72,.4);margin-bottom:clamp(36px,5vw,64px)}
+.copper-sec .intro{border-top-color:rgba(224,164,121,.45)}
+.intro .kicker{grid-column:1;grid-row:1/4;display:block;margin:0;letter-spacing:.2em}
+.intro .kicker::before{content:counter(sec,decimal-leading-zero);display:block;width:auto;height:auto;background:none;transform:none!important;font:italic 400 2.8rem/1 var(--serif);letter-spacing:0;margin-bottom:14px}
+.intro h2{grid-column:2;font-size:clamp(2.2rem,5.2vw,4rem);max-width:13em}
+.intro>p:not(.kicker){grid-column:2;max-width:36em;margin-top:18px;font-size:1.1rem}
+
+/* type: solid colour, metal kept for the wordmarks only */
+.copper-sec h2{background:none;color:var(--on-copper)}
+h2 .copper-text,h3.copper-text{background:none;color:var(--copper-3);font-style:italic;font-weight:400}
+.foot-h{background:none;color:var(--on-copper);animation:none}
+.foot-h em{background:none;color:var(--copper-1)}
+.moment h3{background:none;color:var(--on-copper)}
+
+/* hero: no panels */
+.lead{background:none;border:0;padding:0;font-size:1.22rem;max-width:30em}
+.facts{background:none;border:0;border-top:1px solid rgba(224,164,121,.45);gap:0 28px}
+.facts div,.facts div:hover{background:none;padding:16px 0 0}
+.facts div:hover b{letter-spacing:0}
+
+/* buttons: flat, squared, an arrow that moves */
+.btn{display:inline-flex;align-items:center;gap:14px;border:1px solid;padding:16px 24px;overflow:visible}
+.btn::after{content:"\2192";position:static;width:auto;background:none;transform:none;font-size:1.1rem;line-height:1;letter-spacing:0;transition:transform .45s var(--ease)}
+.btn:hover::after,.btn:focus-visible::after{left:auto;transform:translateX(7px)}
+.btn.copper{background:var(--copper-2);border-color:var(--copper-2);color:#fff8f1;text-shadow:none}
+.btn.silver{background:none;border-color:currentColor;color:inherit}
+.btn:hover,.btn:focus-visible{filter:none;transform:none;box-shadow:none}
+.btn.copper:hover,.btn.copper:focus-visible{background:var(--copper-1);border-color:var(--copper-1);color:var(--copper-5)}
+.btn.silver:hover,.btn.silver:focus-visible{background:var(--on-copper);border-color:var(--on-copper);color:var(--copper-5)}
+
+/* the four hands: a ruled list, not four cards */
+.steps{display:block}
+.steps li,.steps li.in:hover{display:grid;grid-template-columns:minmax(70px,220px) minmax(0,1fr) minmax(0,1.5fr);column-gap:clamp(24px,5vw,72px);align-items:baseline;padding:28px 0;border:0;border-top:1px solid rgba(224,164,121,.35);background:none;box-shadow:none;translate:none;overflow:visible}
+.steps li:last-child{border-bottom:1px solid rgba(224,164,121,.35)}
+.steps li::before{background:none;color:var(--copper-1);font-size:1.5rem;margin:0;letter-spacing:0!important}
+.steps h3{color:var(--on-copper);font-size:clamp(1.7rem,3vw,2.4rem);margin:0;transition:color .4s,translate .6s var(--ease)}
+.steps li:hover h3{color:var(--copper-1);translate:14px 0}
+.steps p{font-size:1.05rem}
+.motifs{margin-top:clamp(36px,5vw,64px)}
+.motif{border-top:0;padding-top:0}
+
+/* brewing: steps set as plain text beside the pot card */
+.brew,.anatomy{align-items:start}
+.brew ol{margin-top:0;font-size:1.1rem}
+.parts{margin-top:0}
+
+/* photographs do the moving; cards stay put */
+.spice:hover,.metal:hover,.figure:hover{box-shadow:0 18px 40px -22px rgba(30,33,38,.55)}
+.metal .shot::after{display:none}
+.dot::after{animation-duration:3.6s}
+
+@media (max-width:760px){
+  .intro{grid-template-columns:1fr}
+  .intro .kicker{grid-row:auto;margin-bottom:14px}
+  .intro .kicker::before{display:inline;font-size:1.3rem;margin:0 12px 0 0}
+  .intro h2,.intro>p:not(.kicker){grid-column:1}
+  .steps li,.steps li.in:hover{grid-template-columns:44px 1fr}
+  .steps p{grid-column:2;margin-top:6px}
+}
+
+/* chinar-leaf cursor: copper leaf everywhere, a pale leaf over anything clickable */
+:root{--leaf:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='-32 -32 64 64'><g transform='rotate(-35)' stroke='%2332170a' stroke-linejoin='round' stroke-linecap='round'><path d='M0 16V30' fill='none' stroke-width='7'/><path d='M0 16L-8 12L-20 18L-17 8L-28 2L-18-3L-22-16L-10-11L0-28L10-11L22-16L18-3L28 2L17 8L20 18L8 12Z' fill='%23d08a55' stroke-width='3.5'/><path d='M0 30V-20M0 6L-19 1M0 6L19 1M0-3L-15-11M0-3L15-11' fill='none' stroke-width='2'/><path d='M0 17V29' fill='none' stroke='%23d08a55' stroke-width='3'/></g></svg>") 8 5,auto;--leaf-on:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='-32 -32 64 64'><g transform='rotate(-35)' stroke='%2332170a' stroke-linejoin='round' stroke-linecap='round'><path d='M0 16V30' fill='none' stroke-width='7'/><path d='M0 16L-8 12L-20 18L-17 8L-28 2L-18-3L-22-16L-10-11L0-28L10-11L22-16L18-3L28 2L17 8L20 18L8 12Z' fill='%23fbe6d2' stroke-width='3.5'/><path d='M0 30V-20M0 6L-19 1M0 6L19 1M0-3L-15-11M0-3L15-11' fill='none' stroke-width='2'/><path d='M0 17V29' fill='none' stroke='%23fbe6d2' stroke-width='3'/></g></svg>") 8 5,pointer}
+html{cursor:var(--leaf)}
+a,button,summary,label,select,[role=button]{cursor:var(--leaf-on)}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body id="top">
+<div class="pre" aria-hidden="true"><b>Samavar</b><i></i></div>
+
+<header>
+  <div class="nav-pill">
+    <a class="brand" href="#top">Samavar</a>
+    <nav class="nav-links" aria-label="Main">
+      <span class="nav-hl" aria-hidden="true"></span>
+      <a href="#handwork">Handwork</a>
+      <a href="#parts">Parts</a>
+      <a href="#metals">Silver &amp; Copper</a>
+      <a href="#brew">Brewing</a>
+    </nav>
+    <div class="nav-end">
+      <a class="nav-cta" href="index.html"><span class="roll"><span>Kahwa boxes</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </div>
+    <div class="prog" aria-hidden="true"></div>
+  </div>
+</header>
+
+<div class="menu" id="menu" inert data-lenis-prevent>
+  <div class="menu-in">
+    <nav class="menu-links" aria-label="Menu">
+      <a href="#handwork" data-img="images/samavar-linen.jpg"><small>01</small><span class="ml"><b>Handwork</b></span></a>
+      <a href="#parts" data-img="images/samavar-silver.jpg"><small>02</small><span class="ml"><b>Parts</b></span></a>
+      <a href="#metals" data-img="images/samavar-copper.png"><small>03</small><span class="ml"><b>Silver &amp; Copper</b></span></a>
+      <a href="#day" data-img="images/samavar-copper.png"><small>04</small><span class="ml"><b>A Kashmiri day</b></span></a>
+      <a href="#brew" data-img="images/samavar-linen.jpg"><small>05</small><span class="ml"><b>Brewing</b></span></a>
+      <a href="index.html" data-img="images/box-with-cup.png"><small>06</small><span class="ml"><b>Kahwa boxes</b></span></a>
+    </nav>
+    <div class="menu-side" aria-hidden="true">
+      <div class="menu-arch"><div><img src="images/samavar-linen.jpg" alt=""></div></div>
+      <p>Hand-engraved in silver and copper</p>
+    </div>
+    <div class="menu-foot"><span>Srinagar, Kashmir</span><span class="clock"></span><span>Esc to close</span></div>
+  </div>
+</div>
+
+<main>
+<section class="hero copper-sec">
+  <div class="wrap">
+    <div>
+      <p class="kicker">The kettle of Kashmir <span class="koshur" lang="ks" dir="rtl">سماوار</span></p>
+      <h1><em class="silver-text">The</em> <span class="copper-text">Samavar</span></h1>
+      <p class="lead">A copper kettle with a fire at its heart. Coals glow in a tube down the middle, kahwa simmers all around it, and every inch of the outside is engraved by hand.</p>
+      <div class="btns">
+        <a class="btn copper" href="#handwork">See the handwork</a>
+        <a class="btn silver" href="#parts">How it is built</a>
+      </div>
+      <div class="facts">
+        <div><b>Copper</b><span>beaten into shape by hand</span></div>
+        <div><b>Naqashi</b><span>engraved with hammer and chisel</span></div>
+        <div><b>Kalai</b><span>tinned to a silver shine</span></div>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="arch"><div class="arch-in"><img src="images/samavar-linen.jpg" alt="A hand-engraved Kashmiri samavar standing on a wooden table against linen cloth" width="386" height="518"><i class="steam"></i><i class="steam s2"></i><i class="steam s3"></i></div></div>
+      <svg class="seal" viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="98" fill="#2a1308" stroke="#e0a479"/>
+        <circle cx="100" cy="100" r="57" fill="none" stroke="#e0a479" stroke-opacity=".5"/>
+        <g class="seal-spin"><path id="sealp" fill="none" d="M24 100a76 76 0 1 1 152 0a76 76 0 1 1-152 0"/><text><textPath href="#sealp" textLength="468">Hand engraved · Srinagar · Kashmir · Copper &amp; tin ·</textPath></text></g>
+        <g transform="translate(100 98) scale(1.3)" fill="none" stroke="#eceded" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M0 16L-8 12L-20 18L-17 8L-28 2L-18-3L-22-16L-10-11L0-28L10-11L22-16L18-3L28 2L17 8L20 18L8 12Z"/><path d="M0 30V-20M0 6L-19 1M0 6L19 1M0-3L-15-11M0-3L15-11"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="copper-sec" id="handwork">
+  <div class="wrap">
+    <div class="intro">
+      <p class="kicker">The handwork</p>
+      <h2>Four pairs of hands before the first cup</h2>
+      <p>The pattern behind this page is the same language of leaves and almonds cut into a samavar. Nothing on it is stamped or cast; each one passes from craftsman to craftsman in the old copper lanes of Srinagar.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Shaping</h3><p>The coppersmith beats flat sheet over iron stakes until it swells into the belly, neck and foot.</p></li>
+      <li><h3>Joining</h3><p>Spout, handle, lid and the inner fire tube are fitted and brazed so the body holds water around the coals.</p></li>
+      <li><h3>Engraving</h3><p>The naqash draws nothing first. He cuts vines, leaves and bands straight into the metal, one tap at a time.</p></li>
+      <li><h3>Finishing</h3><p>The piece is tinned inside so it is safe for tea, then polished copper-bright or tinned outside to a silver white.</p></li>
+    </ol>
+    <div class="motifs">
+      <div class="motif">
+        <svg viewBox="-32 -32 64 64" aria-hidden="true"><path d="M0 16L-8 12L-20 18L-17 8L-28 2L-18-3L-22-16L-10-11L0-28L10-11L22-16L18-3L28 2L17 8L20 18L8 12Z"/><path d="M0 30V-20M0 6L-19 1M0 6L19 1M0-3L-15-11M0-3L15-11"/></svg>
+        <div><b>Chinar</b><span>The leaf of Kashmir's great plane tree.</span></div>
+      </div>
+      <div class="motif">
+        <svg viewBox="-32 -32 64 64" aria-hidden="true"><path d="M0 26C-18 26-24 8-16-6C-10-17 4-20 10-28C12-18 20-8 18 6C16 18 10 26 0 26Z"/><path d="M0 19C-11 19-15 8-10-1C-6-8 2-10 6-15C8-9 12-3 11 5C10 13 6 19 0 19Z"/><circle cy="6" r="2.4"/></svg>
+        <div><b>Badam</b><span>The almond, known elsewhere as paisley.</span></div>
+      </div>
+      <div class="motif">
+        <svg viewBox="-32 -32 64 64" aria-hidden="true"><path d="M-28 6c7-12 21-12 28 0s21 12 28 0"/><path d="M-14-8c-4 4-4 8 0 11c4-3 4-7 0-11zM14 20c-4-4-4-8 0-11c4 3 4 7 0 11z"/><path d="M-28-20h56M-28 26h56"/></svg>
+        <div><b>Vine bands</b><span>Running scrolls that ring the neck and belly.</span></div>
+      </div>
+      <div class="motif">
+        <svg viewBox="-32 -32 64 64" aria-hidden="true"><path d="M-26-26h52v52h-52z"/><path d="M0-20l8 8l-8 8l-8-8zM0 4l8 8l-8 8l-8-8zM-12-8l8 8l-8 8l-8-8zM12-8l8 8l-8 8l-8-8z"/></svg>
+        <div><b>Jaali</b><span>Pierced lattice on the foot that feeds air to the coals.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="parts">
+  <div class="wrap">
+    <div class="intro">
+      <p class="kicker">How it is built</p>
+      <h2>A kettle with its <span class="copper-text">own hearth</span></h2>
+      <p>A samavar needs no stove. The fire sits inside it, so the tea stays hot for hours and can be carried from the kitchen to wherever the guests are.</p>
+    </div>
+    <div class="anatomy">
+    <div class="figure">
+      <div class="pin">
+        <img src="images/samavar-silver.jpg" alt="A tinned, engraved samavar with numbered parts" width="611" height="1000" loading="lazy">
+        <span class="dot" style="left:50%;top:10%" aria-hidden="true">1</span>
+        <span class="dot" style="left:13%;top:21%" aria-hidden="true">2</span>
+        <span class="dot" style="left:89%;top:29%" aria-hidden="true">3</span>
+        <span class="dot" style="left:55%;top:44%" aria-hidden="true">4</span>
+        <span class="dot" style="left:55%;top:75%" aria-hidden="true">5</span>
+      </div>
+    </div>
+    <div>
+      <ol class="parts">
+        <li><i>1</i><b>Lid and cap</b><span>Lifts off to fill the kettle and to feed the fire below.</span></li>
+        <li><i>2</i><b>Spout</b><span>Set high on the shoulder, for a long, clean pour.</span></li>
+        <li><i>3</i><b>Handle</b><span>Cast brass, kept clear of the hot body.</span></li>
+        <li><i>4</i><b>Belly</b><span>Holds the tea, and carries most of the engraving.</span></li>
+        <li><i>5</i><b>Pierced foot</b><span>Draws in air and lets the ash fall away.</span></li>
+        <li><i>6</i><b>Fire tube</b><span>Hidden inside: a copper column packed with live charcoal.</span></li>
+      </ol>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="metals">
+  <div class="wrap">
+    <div class="intro">
+      <p class="kicker">Two finishes</p>
+      <h2>One metal, <span class="copper-text">two faces</span></h2>
+      <p>Every samavar begins as copper. What you see at the end depends on whether the smith leaves that copper bare or covers it in tin.</p>
+    </div>
+    <div class="metals">
+      <article class="metal ag">
+        <div class="shot"><img src="images/samavar-silver.jpg" alt="A silver-white tinned samavar with spiral bands of engraving" width="611" height="1000" loading="lazy"></div>
+        <div class="txt">
+          <h3>Silver</h3>
+          <p>Copper tinned on the outside until it turns a soft silver white. The engraving is cut afterwards, so every line shows dark against the shine.</p>
+          <ul><li>Spiral bands of fine vine work</li><li>Cool, bright surface that suits daily use</li><li>Re-tinned every few years to keep its colour</li></ul>
+        </div>
+      </article>
+      <article class="metal cu">
+        <div class="shot"><img src="images/samavar-copper.png" alt="A bare copper samavar engraved with a large chinar leaf" width="1199" height="1312" loading="lazy"></div>
+        <div class="txt">
+          <h3 class="copper-text">Copper</h3>
+          <p>Left bare and polished, the metal glows red-gold. The work here is deeper and bolder, with a single chinar leaf raised on the belly.</p>
+          <ul><li>Deep relief engraving you can feel</li><li>Warm colour that darkens with age</li><li>Brightens again with lemon and salt</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="copper-sec" id="day">
+  <div class="day-wrap">
+    <div class="intro">
+      <p class="kicker">In a Kashmiri home</p>
+      <h2>A day around the samavar</h2>
+      <p>In Kashmir the samavar is not brought out for show. It is lit before the house wakes and it is still warm when the last guest leaves.</p>
+    </div>
+    <div class="day-row">
+      <article class="moment">
+        <svg viewBox="-32 -32 64 64" aria-hidden="true"><path d="M-26 14h52M-18 14a18 18 0 0 1 36 0"/><path d="M0-12v-9M-16-4l-6-6M16-4l6-6M-26 24h52"/></svg>
+        <p class="when">Dawn</p>
+        <h3>Noon chai and warm bread</h3>
+        <p>The first pot of the day is salted pink tea. Someone walks to the baker and comes back with bread still hot from the oven.</p>
+        <p class="terms"><i>noon chai</i> salt tea · <i>kandur</i> the baker · <i>girda</i> round bread</p>
+      </article>
+      <article class="moment">
+        <svg viewBox="-32 -32 64 64" aria-hidden="true"><path d="M-16-4h32c0 16-6 24-16 24s-16-8-16-24z"/><path d="M-9 26h18M-6-12c-3-4 3-6 0-10M6-12c-3-4 3-6 0-10"/></svg>
+        <p class="when">Afternoon</p>
+        <h3>A cup for whoever comes</h3>
+        <p>A guest is never asked whether they would like tea. Kahwa is poured the moment they sit down, and the cup is filled again before it is empty.</p>
+        <p class="terms"><i>kahwa</i> saffron green tea · <i>khos</i> the small cup it is drunk from</p>
+      </article>
+      <article class="moment">
+        <svg viewBox="-32 -32 64 64" aria-hidden="true"><circle r="19"/><circle r="9"/><circle cy="-27" r="2.6"/><circle cx="27" r="2.6"/><circle cy="27" r="2.6"/><circle cx="-27" r="2.6"/></svg>
+        <p class="when">The wedding</p>
+        <h3>Carried down the rows</h3>
+        <p>At a wedding feast the guests sit four to a platter. When the meal is over, samavars are carried along the rows and kahwa closes the evening.</p>
+        <p class="terms"><i>wazwan</i> the wedding feast · <i>trami</i> the platter shared by four</p>
+      </article>
+      <article class="moment">
+        <svg viewBox="-32 -32 64 64" aria-hidden="true"><path d="M0-26V26M-22-13L22 13M-22 13L22-13"/><path d="M-6-20l6 6l6-6M-6 20l6-6l6 6M-21-4l8 2l-2 8M21 4l-8-2l2-8M-21 4l8-2l-2-8M21-4l-8 2l2 8"/></svg>
+        <p class="when">Deep winter</p>
+        <h3>Forty days of cold</h3>
+        <p>Through the hardest stretch of winter the family gathers in one room, each with a fire pot under their cloak. The samavar keeps tea hot for hours without a stove.</p>
+        <p class="terms"><i>chillai kalan</i> the forty coldest days · <i>kangri</i> fire pot · <i>pheran</i> the cloak</p>
+      </article>
+    </div>
+    <div class="day-bar" aria-hidden="true"><i></i></div>
+    <p class="day-hint" aria-hidden="true">Keep scrolling · the day moves on</p>
+  </div>
+</section>
+
+<section class="copper-sec" id="brew">
+  <div class="wrap">
+    <div class="intro">
+      <p class="kicker">Brewing</p>
+      <h2>What happens inside</h2>
+      <p>One kettle makes both of Kashmir's teas. Choose one on the card to see what goes in.</p>
+    </div>
+    <div class="brew">
+    <div>
+      <ol class="tea-k">
+        <li>Live charcoal is dropped into the fire tube through the top.</li>
+        <li>Water is poured into the belly around it and comes to a simmer.</li>
+        <li>Green tea, saffron, cardamom and cinnamon go in and steep slowly.</li>
+        <li>The kahwa is poured from the spout over crushed almonds in each cup.</li>
+      </ol>
+      <ol class="tea-n" hidden>
+        <li>Live charcoal is dropped into the fire tube through the top.</li>
+        <li>Green tea leaves boil in a little water with a pinch of soda until the liquor turns deep red.</li>
+        <li>Milk and salt go in, and the red turns to pink.</li>
+        <li>It is poured into each cup with a spoon of cream, and eaten with bread from the baker.</li>
+      </ol>
+      <div class="btns"><a class="btn silver" href="index.html">See our kahwa boxes</a></div>
+    </div>
+    <div class="spice">
+      <div class="seg" role="group" aria-label="Choose the tea">
+        <button type="button" data-tea="k" aria-pressed="true">Kahwa</button>
+        <button type="button" data-tea="n" aria-pressed="false">Noon chai</button>
+      </div>
+      <h3>In the pot</h3>
+      <dl class="tea-k">
+        <dt>Green tea</dt><dd>Kashmiri leaves, never boiled hard</dd>
+        <dt>Saffron</dt><dd>A few strands for colour and scent</dd>
+        <dt>Cardamom</dt><dd>Green pods, lightly crushed</dd>
+        <dt>Cinnamon</dt><dd>A small piece of bark</dd>
+        <dt>Almonds</dt><dd>Slivered, added to the cup</dd>
+      </dl>
+      <dl class="tea-n" hidden>
+        <dt>Green tea</dt><dd>Boiled long and hard, the opposite of kahwa</dd>
+        <dt>Soda</dt><dd>A pinch, to draw out the red</dd>
+        <dt>Salt</dt><dd>In place of sugar</dd>
+        <dt>Milk</dt><dd>Turns the red liquor pink</dd>
+        <dt>Cream</dt><dd>A spoonful floated on each cup</dd>
+      </dl>
+      <p class="tea-note tea-k">Golden and sweet. The tea for guests and for celebrations.</p>
+      <p class="tea-note tea-n" hidden>Pink and salted. The everyday tea, morning and afternoon. <i>Noon</i> is the Kashmiri word for salt.</p>
+    </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-cta">
+    <div>
+      <p class="kicker">Until the next cup</p>
+      <h2 class="foot-h">The fire is lit.<br><em>Pour the kahwa.</em></h2>
+    </div>
+    <a class="orb" href="index.html"><span>See the<br>kahwa boxes<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+  </div>
+  <div class="wrap foot-grid">
+    <div><h3>Explore</h3><a href="#handwork">Handwork</a><a href="#parts">Parts</a><a href="#metals">Silver &amp; Copper</a><a href="#day">A Kashmiri day</a><a href="#brew">Brewing</a></div>
+    <div><h3>The craft</h3><span>Copper, beaten by hand</span><span>Naqashi engraving</span><span>Kalai tinning</span></div>
+    <div><h3>Shop</h3><a href="index.html">Kahwa gift boxes</a></div>
+    <div><h3>Srinagar, Kashmir</h3><span class="clock"></span><span>34.08° N, 74.80° E</span></div>
+  </div>
+  <div class="foot-word" aria-hidden="true">Samavar</div>
+  <div class="wrap foot-bar">
+    <span>© 2026 Samavar <span class="koshur" lang="ks" dir="rtl">سماوار</span></span>
+    <span>Hand-engraved in silver and copper</span>
+    <a class="totop" href="#top">Back to top<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6l6 6"/></svg></a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+<script>
+(()=>{
+const d=document,root=d.documentElement,$=(s,c=d)=>[...c.querySelectorAll(s)];
+const calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+/* reveals: each block rises in as it enters, siblings staggered */
+const sel='.hero .kicker,.lead,.hero .btns,.facts div,.stage,.intro,.steps li,.motif,.figure,#parts .plate,.parts li,.metal,.brew .kicker,.brew ol li,.brew .btns,.spice';
+const rv=$(sel);
+rv.forEach(el=>{
+  el.classList.add('rv');
+  const sib=[...el.parentNode.children].filter(x=>x.matches(sel));
+  el.style.setProperty('--d',(sib.indexOf(el)%6*.09)+'s');
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target;el.classList.add('in');io.unobserve(el);
+  setTimeout(()=>el.style.removeProperty('--d'),1500);
+}),{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+/* headings start fully clipped, so they are watched through their parent block */
+const hio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  $('h2',e.target).forEach(h=>h.classList.add('in'));hio.unobserve(e.target);
+}),{threshold:.12});
+const start=()=>{root.classList.add('loaded');rv.forEach(el=>io.observe(el));$('h2').forEach(h=>hio.observe(h.parentNode))};
+setTimeout(start,calm?0:1250);
+
+$('.motif svg *').forEach(p=>p.setAttribute('pathLength',1));
+
+/* libraries: each is optional, the page still works if one fails to load */
+const G=window.gsap,ST=window.ScrollTrigger,M=window.Motion;
+if(G&&ST)G.registerPlugin(ST);
+const lenis=(!calm&&window.Lenis)?new Lenis({lerp:.09}):null;
+if(lenis&&ST)lenis.on('scroll',ST.update);
+
+/* navbar: a highlight capsule slides to the hovered link and rests on the section in view */
+const hl=$('.nav-hl')[0],nl=$('.nav-links')[0],nas=$('.nav-links a');
+const park=a=>{
+  if(!a){G?G.to(hl,{opacity:0,duration:.3,overwrite:'auto'}):hl.style.opacity=0;return}
+  const x=a.offsetLeft,w=a.offsetWidth;
+  if(G&&!calm)G.to(hl,{x,width:w,opacity:1,duration:.6,ease:'power4.out',overwrite:'auto'});
+  else Object.assign(hl.style,{transform:`translateX(${x}px)`,width:w+'px',opacity:1});
+};
+nas.forEach(a=>{a.addEventListener('pointerenter',()=>park(a));a.addEventListener('focus',()=>park(a))});
+nl.addEventListener('pointerleave',()=>park(nl.querySelector('.active')));
+const spy=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  nas.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));
+  if(!nl.matches(':hover'))park(nl.querySelector('.active'));
+}),{rootMargin:'-45% 0px -50% 0px'});
+$('section[id]').forEach(s=>spy.observe(s));
+new IntersectionObserver(es=>{
+  if(!es[0].isIntersecting)return;
+  nas.forEach(a=>a.classList.remove('active'));if(!nl.matches(':hover'))park(null);
+},{rootMargin:'-45% 0px -50% 0px'}).observe($('.hero')[0]);
+
+/* full-screen menu: opens as a circle from the button */
+const menu=$('#menu')[0],burger=$('.burger')[0],mimg=$('.menu-arch img')[0];let open=false,mtl;
+const setMenu=v=>{
+  if(v===open)return;open=v;
+  burger.setAttribute('aria-expanded',v);burger.setAttribute('aria-label',v?'Close menu':'Open menu');
+  root.classList.toggle('menu-open',v);menu.inert=!v;
+  if(lenis)v?lenis.stop():lenis.start();else d.body.style.overflow=v?'hidden':'';
+  const r=burger.getBoundingClientRect(),at=`${r.left+r.width/2}px ${r.top+r.height/2}px`,R=Math.hypot(innerWidth,innerHeight);
+  if(G&&!calm){
+    mtl&&mtl.kill();
+    if(v){
+      menu.scrollTop=0;
+      mtl=G.timeline().set(menu,{visibility:'visible'})
+        .fromTo(menu,{clipPath:`circle(0px at ${at})`},{clipPath:`circle(${R}px at ${at})`,duration:1,ease:'power4.inOut'})
+        .fromTo('.menu-links b',{yPercent:120},{yPercent:0,duration:1,stagger:.07,ease:'power4.out'},.35)
+        .fromTo('.menu-links small,.menu-foot>*,.menu-side p',{opacity:0},{opacity:1,duration:.6,stagger:.04},.6)
+        .fromTo('.menu-arch',{yPercent:30,opacity:0,rotate:6},{yPercent:0,opacity:1,rotate:0,duration:1.1,ease:'power4.out'},.35)
+        .fromTo(mimg,{scale:1.4},{scale:1,duration:1.6,ease:'power3.out'},.35);
+    }else{
+      mtl=G.timeline().to(menu,{clipPath:`circle(0px at ${at})`,duration:.75,ease:'power4.inOut'}).set(menu,{visibility:'hidden'});
+    }
+  }else menu.style.visibility=v?'visible':'hidden';
+};
+burger.addEventListener('click',()=>setMenu(!open));
+addEventListener('keydown',e=>{if(e.key==='Escape'&&open){setMenu(false);burger.focus()}});
+$('.menu-links a').forEach(a=>a.addEventListener('pointerenter',()=>{
+  const src=a.dataset.img;if(!src||mimg.getAttribute('src')===src)return;
+  mimg.setAttribute('src',src);
+  if(G&&!calm)G.fromTo(mimg,{opacity:0,scale:1.25},{opacity:1,scale:1,duration:.9,ease:'power3.out',overwrite:true});
+}));
+
+/* in-page links glide with Lenis */
+d.addEventListener('click',e=>{
+  const a=e.target.closest('a[href^="#"]');if(!a)return;
+  const id=a.getAttribute('href'),t=id==='#top'?d.body:d.querySelector(id);if(!t)return;
+  e.preventDefault();setMenu(false);
+  if(lenis)lenis.scrollTo(id==='#top'?0:t,{duration:1.5});
+  else t.scrollIntoView({behavior:calm?'auto':'smooth'});
+});
+
+/* Srinagar local time */
+const clocks=$('.clock'),fmt=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'});
+const tick=()=>clocks.forEach(c=>{c.textContent=fmt.format(new Date())+' IST'});
+tick();setInterval(tick,20000);
+
+/* a day around the samavar: pinned sideways travel on desktop, a swipeable row elsewhere */
+const row=$('.day-row')[0],dwrap=$('.day-wrap')[0],dbar=$('.day-bar i')[0];
+if(G&&ST&&fine&&!calm&&innerWidth>900){
+  row.classList.add('pinned');
+  const dist=()=>Math.max(0,row.scrollWidth-dwrap.clientWidth+2*parseFloat(getComputedStyle(dwrap).paddingLeft));
+  G.to(row,{x:()=>-dist(),ease:'none',scrollTrigger:{trigger:dwrap,start:'center center',end:()=>'+='+dist(),pin:true,scrub:.7,invalidateOnRefresh:true,onUpdate:st=>{dbar.style.transform=`scaleX(${st.progress})`}}});
+}else{
+  $('.day-hint')[0].textContent='Swipe · the day moves on';
+  row.addEventListener('scroll',()=>{dbar.style.transform=`scaleX(${row.scrollLeft/Math.max(1,row.scrollWidth-row.clientWidth)})`},{passive:true});
+}
+
+/* two teas, one kettle */
+const brew=$('#brew')[0],teaBtns=$('.seg button');
+teaBtns.forEach(b=>b.addEventListener('click',()=>{
+  const t=b.dataset.tea;
+  teaBtns.forEach(x=>x.setAttribute('aria-pressed',x===b));
+  $('.tea-k,.tea-n',brew).forEach(el=>{el.hidden=!el.classList.contains('tea-'+t)});
+  $('.rv',brew).forEach(el=>el.classList.add('in'));
+  if(G&&!calm)G.fromTo($('.tea-'+t,brew),{opacity:0,y:16},{opacity:1,y:0,duration:.7,stagger:.09,ease:'power3.out',clearProps:'transform,opacity'});
+  if(ST)ST.refresh();
+}));
+
+/* footer wordmark: letters rise as the page ends, and spring when touched */
+const word=$('.foot-word')[0],bar=$('.prog')[0];let motionBar=false;
+word.innerHTML=[...word.textContent].map(c=>`<span>${c}</span>`).join('');
+if(!calm){
+  if(G&&ST){
+    G.from('.foot-word span',{yPercent:110,rotate:10,stagger:.08,ease:'none',scrollTrigger:{trigger:word,start:'top 98%',end:'bottom bottom',scrub:.8}});
+    G.to('.hero .wrap>div:first-child',{y:-70,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+    G.from('.foot-grid>div',{opacity:0,y:46,stagger:.12,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:'.foot-grid',start:'top 90%'}});
+    G.from('.orb>span',{scale:.6,rotate:-40,ease:'none',scrollTrigger:{trigger:'.foot-cta',start:'top 95%',end:'top 45%',scrub:.6}});
+  }
+  if(M&&M.animate){
+    $('.foot-word span').forEach(l=>l.addEventListener('pointerenter',()=>M.animate(l,{y:[0,-34,0]},{duration:.9,ease:[.2,.7,.1,1]})));
+    /* Motion drives the progress line straight from scroll position */
+    if(M.scroll)M.scroll(p=>{bar.style.transform=`scaleX(${p})`;motionBar=true});
+  }
+}
+
+/* anatomy: pins and list rows light each other up */
+const dots=$('.dot'),lis=$('.parts li');
+const wire=(i,on)=>{dots[i]&&dots[i].classList.toggle('hot',on);lis[i]&&lis[i].classList.toggle('hot',on)};
+[dots,lis].forEach(set=>set.forEach((el,i)=>{
+  el.addEventListener('pointerenter',()=>wire(i,true));
+  el.addEventListener('pointerleave',()=>wire(i,false));
+}));
+
+
+let heroOn=true;
+new IntersectionObserver(es=>{heroOn=es[0].isIntersecting}).observe($('.hero')[0]);
+
+/* pointer: the hero photograph tilts, the round footer button pulls toward the cursor */
+if(fine&&!calm){
+  $('.stage').forEach(el=>{
+    el.classList.add('tilt');
+    const max=el.matches('.stage,.figure')?8:5;
+    el.addEventListener('pointermove',e=>{
+      const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+      el.style.transform=`perspective(900px) rotateX(${(.5-y)*max}deg) rotateY(${(x-.5)*max}deg)`;
+      el.style.setProperty('--mx',x*100+'%');el.style.setProperty('--my',y*100+'%');
+    });
+    el.addEventListener('pointerleave',()=>{el.style.transform=''});
+  });
+  $('.orb').forEach(b=>{
+    b.addEventListener('pointermove',e=>{
+      const r=b.getBoundingClientRect();
+      b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`;
+    });
+    b.addEventListener('pointerleave',()=>{b.style.transform=''});
+  });
+}
+
+/* one frame loop: scroll progress, parallax, seal, embers */
+const hdr=$('header')[0],seal=$('.seal')[0],pimg=$('.arch img')[0],arch=$('.arch')[0];
+let sy=scrollY,vel=0;
+const frame=t=>{
+  if(lenis)lenis.raf(t);
+  const y=scrollY,max=root.scrollHeight-innerHeight;
+  vel+=((y-sy)-vel)*.2;sy=y;
+  if(!motionBar)bar.style.transform=`scaleX(${max>0?y/max:0})`;
+  hdr.classList.toggle('scrolled',y>40);
+  if(open||y<240||vel<-1.5)hdr.classList.remove('hide');else if(vel>2.5)hdr.classList.add('hide');
+  if(!calm){
+    if(heroOn){
+      const r=arch.getBoundingClientRect(),p=(r.top+r.height/2-innerHeight/2)/innerHeight;
+      pimg.style.transform=`translate3d(0,${p*-46}px,0) scale(1.16)`;
+      seal.style.transform=`translateZ(50px) rotate(${y*.3}deg)`;
+    }
+  }
+  requestAnimationFrame(frame);
+};
+requestAnimationFrame(frame);
+})();
+</script>
+
+</body>
+</html>
